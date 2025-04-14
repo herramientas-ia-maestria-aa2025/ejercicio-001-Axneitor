@@ -10,15 +10,20 @@ with open("informacion.txt", "r", encoding="utf-8") as archivo:
         if len(partes) != 4:
             print(f"[Línea {i}] Error de formato: {linea}")
             continue
+        if "example.org" in partes[3]:
+            nombre = partes[0]
+            apellido = partes[1]
+            direccion = partes[2]
+            correo = partes[3]
+            print(f"Registro {i}")
+            print(f"  Nombres:   {nombre}")
+            print(f"  Apellidos: {apellido}")
+            print(f"  Dirección: {direccion}")
+            print(f"  Correo:    {correo}")
+            print("-" * 50)
+            
 
-        nombre = partes[0]
-        apellido = partes[1]
-        direccion = partes[2]
-        correo = partes[3]
+
+       
         
-        print(f"Registro {i}")
-        print(f"  Nombres:   {nombre}")
-        print(f"  Apellidos: {apellido}")
-        print(f"  Dirección: {direccion}")
-        print(f"  Correo:    {correo}")
-        print("-" * 50)
+        
